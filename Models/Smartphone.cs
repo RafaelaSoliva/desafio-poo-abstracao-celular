@@ -39,6 +39,13 @@ public abstract class Smartphone {
         }
     }
 
+    public Aplicativo DesinstalarAplicativo(string nome) {
+        Aplicativo aplicativo = AplicativosInstalados.Find(a => a.Nome == nome);
+        AplicativosInstalados.Remove(aplicativo);
+
+        return aplicativo;
+    }
+
     // Método abstrato (deve chamar o metodo VerificarMemoriaDisponivel)
     public abstract void InstalarAplicativo(string nome, float tamanho);
 }
