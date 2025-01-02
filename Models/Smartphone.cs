@@ -5,11 +5,11 @@ public abstract class Smartphone {
     public string Numero { get; set; }
     private string Modelo { get; set; }
     private string Imei { get; set; }
-    private int MemoriaTotal { get; set; }
-    protected int MemoriaDisponivel { get; set; }
+    private float MemoriaTotal { get; set; }
+    protected float MemoriaDisponivel { get; set; }
 
     // Construção da classe
-    public Smartphone(string numero, string modelo, string imei, int memoriaTotal) {
+    public Smartphone(string numero, string modelo, string imei, float memoriaTotal) {
         Numero = numero;
         Modelo = modelo;
         Imei = imei;
@@ -26,7 +26,7 @@ public abstract class Smartphone {
         Console.WriteLine("Recebendo chamada..");
     }
 
-    public bool VerificarMemoriaDisponivel(int MemoriaDisponivel) {
+    public bool VerificarMemoriaDisponivel(float MemoriaDisponivel) {
         return MemoriaDisponivel > 0;
     }
 

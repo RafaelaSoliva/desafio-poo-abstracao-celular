@@ -2,7 +2,7 @@ namespace Models;
 
 public class Iphone : Smartphone{
     // Construção da classe
-    public Iphone(string numero, string modelo, string imei, int memoriaTotal) : base(numero, modelo, imei, memoriaTotal) {
+    public Iphone(string numero, string modelo, string imei, float memoriaTotal) : base(numero, modelo, imei, memoriaTotal) {
     }
 
     // Implementação do método abstrato
