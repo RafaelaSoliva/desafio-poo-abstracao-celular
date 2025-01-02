@@ -43,6 +43,7 @@ public abstract class Smartphone {
         Aplicativo aplicativo = AplicativosInstalados.Find(a => a.Nome == nome);
         AplicativosInstalados.Remove(aplicativo);
         MemoriaDisponivel = MemoriaDisponivel + aplicativo.Tamanho;
+        Console.WriteLine($"{aplicativo.Nome} desinstalado! {aplicativo.Tamanho} MB liberados.");
         return aplicativo;
     }
 
