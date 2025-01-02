@@ -7,6 +7,7 @@ public abstract class Smartphone {
     private string Imei { get; set; }
     private float MemoriaTotal { get; set; }
     protected float MemoriaDisponivel { get; set; }
+    protected List<Aplicativo> AplicativosInstalados { get; set; }
 
     // Construção da classe
     public Smartphone(string numero, string modelo, string imei, float memoriaTotal) {
@@ -15,6 +16,7 @@ public abstract class Smartphone {
         Imei = imei;
         MemoriaTotal = memoriaTotal;
         MemoriaDisponivel = memoriaTotal;
+        AplicativosInstalados = new List<Aplicativo>();
     }
 
     // Métodos
@@ -31,5 +33,5 @@ public abstract class Smartphone {
     }
 
     // Método abstrato (deve chamar o metodo VerificarMemoriaDisponivel)
-    public abstract void InstalarAplicativo(string nome);
+    public abstract void InstalarAplicativo(string nome, float tamanho);
 }
