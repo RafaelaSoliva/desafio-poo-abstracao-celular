@@ -32,6 +32,13 @@ public abstract class Smartphone {
         return MemoriaDisponivel > 0;
     }
 
+    public void ListarAplicativosInstalados() {
+        Console.WriteLine("Aplicativos instalados:");
+        foreach(var Aplicativo in AplicativosInstalados) {
+            Console.WriteLine($"{Aplicativo.Nome} - {Aplicativo.Tamanho} MB");
+        }
+    }
+
     // Método abstrato (deve chamar o metodo VerificarMemoriaDisponivel)
     public abstract void InstalarAplicativo(string nome, float tamanho);
 }
