@@ -40,10 +40,19 @@ public abstract class Smartphone {
     }
 
     public Aplicativo DesinstalarAplicativo(string nome) {
+        // Encontra o aplicativo na lista de aplicativos instalados
         Aplicativo aplicativo = AplicativosInstalados.Find(a => a.Nome == nome);
+
+        // Remove o aplicativo encontrado
         AplicativosInstalados.Remove(aplicativo);
+
+        // Libera a memória utilizada pelo aplicativo removido
         MemoriaDisponivel = MemoriaDisponivel + aplicativo.Tamanho;
+
+        // Retorna para o usuário
         Console.WriteLine($"{aplicativo.Nome} desinstalado! {aplicativo.Tamanho} MB liberados.");
+
+        // Retorna o aplicativo removido
         return aplicativo;
     }
 
