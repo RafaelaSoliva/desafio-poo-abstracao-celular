@@ -6,7 +6,7 @@ public abstract class Smartphone {
     private string Modelo { get; set; }
     private string Imei { get; set; }
     private int MemoriaTotal { get; set; }
-    private int MemoriaDisponivel { get; set; }
+    protected int MemoriaDisponivel { get; set; }
 
     // Construção da classe
     public Smartphone(string numero, string modelo, string imei, int memoriaTotal) {
