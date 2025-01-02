@@ -6,11 +6,12 @@ public class Nokia : Smartphone{
     }
 
     // Implementação do método abstrato
-    public override void InstalarAplicativo(string nome) {
+    public override void InstalarAplicativo(string nome, float tamanho) {
         bool memoriaDisponivel = VerificarMemoriaDisponivel(MemoriaDisponivel);
 
         if (memoriaDisponivel) {
-            MemoriaDisponivel --;
+            MemoriaDisponivel = MemoriaDisponivel - tamanho;
+            AplicativosInstalados.Add(new Aplicativo(nome, tamanho));
             Console.WriteLine($"{nome} instalado via Google Play!");
         } else {
             Console.WriteLine($"Não há memória disponível para instalar {nome}!");
