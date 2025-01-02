@@ -40,11 +40,28 @@ public abstract class Smartphone {
     }
 
     public Aplicativo DesinstalarAplicativo(string nome) {
+        try { // Tratamento de exceção: O aplicativo requisitado pode não existir na lista
+        // Encontra o aplicativo na lista de aplicativos instalados
         Aplicativo aplicativo = AplicativosInstalados.Find(a => a.Nome == nome);
+
+        // Remove o aplicativo encontrado
         AplicativosInstalados.Remove(aplicativo);
+
+        // Libera a memória utilizada pelo aplicativo removido
         MemoriaDisponivel = MemoriaDisponivel + aplicativo.Tamanho;
+
+        // Retorna para o usuário
         Console.WriteLine($"{aplicativo.Nome} desinstalado! {aplicativo.Tamanho} MB liberados.");
+
+        // Retorna o aplicativo removido
         return aplicativo;
+
+        } catch (Exception e) { 
+            Console.WriteLine("Falha ao desinstalar!");
+            Console.WriteLine("Aplicativo não encontrado.");
+
+            return null;
+        }
     }
 
     // Método abstrato (deve chamar o metodo VerificarMemoriaDisponivel)
