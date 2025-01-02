@@ -7,7 +7,9 @@ public class Iphone : Smartphone{
 
     // Implementação do método abstrato
     public override void InstalarAplicativo(string nome) {
-        if (VerificarMemoriaDisponivel(MemoriaDisponivel)) {
+        bool memoriaDisponivel = VerificarMemoriaDisponivel(MemoriaDisponivel);
+
+        if (memoriaDisponivel) {
             MemoriaDisponivel --;
             Console.WriteLine($"{nome} instalado via App Store!");
         } else {
