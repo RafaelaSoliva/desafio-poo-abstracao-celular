@@ -59,10 +59,11 @@ public abstract class Smartphone {
         // Retorna o aplicativo removido
         return aplicativo;
 
-        } catch (Exception e) { 
-            Console.WriteLine("Falha ao desinstalar!");
-            Console.WriteLine("Aplicativo não encontrado.");
+        } catch (Exception e) {
+            // Retorna mensagem de erro caso o aplicativo não seja encontrado
+            Console.WriteLine("Falha ao desinstalar! Aplicativo não encontrado."); 
 
+            // Retorna nulo caso o aplicativo não seja encontrado
             return null;
         }
     }
