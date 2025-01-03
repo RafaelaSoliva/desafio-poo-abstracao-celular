@@ -25,7 +25,7 @@ public abstract class Smartphone {
     }
 
     public void ReceberChamada(string numero) {
-        Console.WriteLine("Recebendo chamada: {numero}");
+        Console.WriteLine($"Recebendo chamada: {numero}");
     }
 
     public bool VerificarMemoriaDisponivel(int MemoriaDisponivel) {
