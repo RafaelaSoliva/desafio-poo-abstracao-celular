@@ -1,5 +1,8 @@
 ﻿using Models;
 
+// Indica qual classe está sendo testada
+Console.WriteLine("\nTestando classe Iphone:\n");
+
 // Cria objeto iphone
 Iphone iphone = new Iphone("99999-9999", "iPhone 16 Pro", "7329349282", 256000);
 
@@ -14,6 +17,7 @@ iphone.ListarAplicativosInstalados(); // Retorna lista de aplicativos instalados
 iphone.DesinstalarAplicativo("Reddit"); // Desinstala Reddit
 iphone.DesinstalarAplicativo("Reddit"); // Retorna mensagem de aplicativo não encontrado
 
+// Indica qual classe está sendo testada
 Console.WriteLine("\nTestando classe Nokia:\n");
 
 // Cria o objeto nokia
