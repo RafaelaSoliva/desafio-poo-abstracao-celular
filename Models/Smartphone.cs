@@ -28,8 +28,8 @@ public abstract class Smartphone {
         Console.WriteLine($"Recebendo chamada: {numero}");
     }
 
-    public bool VerificarMemoriaDisponivel(int MemoriaDisponivel) {
-        return MemoriaDisponivel > 0;
+    public bool VerificarMemoriaDisponivel(int MemoriaDisponivel, int tamanho) {
+        return MemoriaDisponivel >= tamanho;
     }
 
     public void ListarAplicativosInstalados() {

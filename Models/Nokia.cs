@@ -7,7 +7,7 @@ public class Nokia : Smartphone{
 
     // Implementação do método abstrato
     public override void InstalarAplicativo(string nome, int tamanho) {
-        bool memoriaDisponivel = VerificarMemoriaDisponivel(MemoriaDisponivel);
+        bool memoriaDisponivel = VerificarMemoriaDisponivel(MemoriaDisponivel, tamanho);
 
         if (memoriaDisponivel) {
             MemoriaDisponivel = MemoriaDisponivel - tamanho;
