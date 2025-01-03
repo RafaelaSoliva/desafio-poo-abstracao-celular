@@ -33,12 +33,11 @@ public abstract class Smartphone {
     }
 
     public void ListarAplicativosInstalados() {
-        Console.WriteLine("Aplicativos instalados:");
-        
         if (AplicativosInstalados.Count > 0) { // Retorna os aplicativos instalados caso a lista não esteja vazia
-            foreach (var Aplicativo in AplicativosInstalados) {
-            Console.WriteLine($"{Aplicativo.Nome} - {Aplicativo.Tamanho} MB"); }
-            } else {
+            Console.WriteLine("Aplicativos instalados:"); // Título
+                foreach (var Aplicativo in AplicativosInstalados) { // Percorre a lista e retorna os aplicativos instalados
+                Console.WriteLine($"{Aplicativo.Nome} - {Aplicativo.Tamanho} MB"); }
+        } else { // Retorna mensagem caso a lista esteja vazia
             Console.WriteLine("Nenhum aplicativo instalado.");
         }
     }
