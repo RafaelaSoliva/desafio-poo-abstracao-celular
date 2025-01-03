@@ -1,9 +1,9 @@
 ﻿using Models;
 
-// Cria objeto Iphone
+// Cria objeto iphone
 Iphone iphone = new Iphone("99999-9999", "iPhone 16 Pro", "7329349282", 256000);
 
-// Testa todos os metodos da classe Iphone
+// Testa todos os métodos da classe Iphone
 iphone.RealizarChamada("88888-8888"); // Realiza chamada
 iphone.ReceberChamada("88888-8888"); // Recebe chamada
 iphone.ListarAplicativosInstalados(); // Retorna mensagem de lista vazia
