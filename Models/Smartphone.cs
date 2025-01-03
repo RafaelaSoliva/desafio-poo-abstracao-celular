@@ -5,12 +5,12 @@ public abstract class Smartphone {
     public string Numero { get; set; }
     private string Modelo { get; set; }
     private string Imei { get; set; }
-    private float MemoriaTotal { get; set; }
-    protected float MemoriaDisponivel { get; set; }
+    private int MemoriaTotal { get; set; }
+    protected int MemoriaDisponivel { get; set; }
     protected List<Aplicativo> AplicativosInstalados { get; set; }
 
     // Construção da classe
-    public Smartphone(string numero, string modelo, string imei, float memoriaTotal) {
+    public Smartphone(string numero, string modelo, string imei, int memoriaTotal) {
         Numero = numero;
         Modelo = modelo;
         Imei = imei;
@@ -28,7 +28,7 @@ public abstract class Smartphone {
         Console.WriteLine("Recebendo chamada..");
     }
 
-    public bool VerificarMemoriaDisponivel(float MemoriaDisponivel) {
+    public bool VerificarMemoriaDisponivel(int MemoriaDisponivel) {
         return MemoriaDisponivel > 0;
     }
 
@@ -69,5 +69,5 @@ public abstract class Smartphone {
     }
 
     // Método abstrato (deve chamar o metodo VerificarMemoriaDisponivel)
-    public abstract void InstalarAplicativo(string nome, float tamanho);
+    public abstract void InstalarAplicativo(string nome, int tamanho);
 }
