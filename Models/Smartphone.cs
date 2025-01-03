@@ -20,12 +20,12 @@ public abstract class Smartphone {
     }
 
     // Métodos
-    public void RealizarChamada(){
-        Console.WriteLine("Realizando chamada..");
+    public void RealizarChamada(string numero){
+        Console.WriteLine($"Chamando {numero}..");
     }
 
-    public void ReceberChamada() {
-        Console.WriteLine("Recebendo chamada..");
+    public void ReceberChamada(string numero) {
+        Console.WriteLine("Recebendo chamada: {numero}");
     }
 
     public bool VerificarMemoriaDisponivel(int MemoriaDisponivel) {
